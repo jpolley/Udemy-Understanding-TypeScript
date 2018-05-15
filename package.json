@@ -1,0 +1,14 @@
+{
+  "name": "Udemy-Understanding-TypeScript",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Jeremy Polley <jeremypolley@gmail.com>",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "lite-server": "^2.3.0"
+  },
+  "scripts": {
+    "start": "lite-server"
+  }
+}
