@@ -40,8 +40,9 @@ myDoubleFunction = function (val1, val2) {
 console.log(myDoubleFunction(10, 20));
 var oldPerson = {
     age: 88,
-    firstName: "Fart",
+    firstName: "Frank",
     greet: function (lastName) {
+        if (lastName === void 0) { lastName = ''; }
         console.log("old person hay");
     }
 };

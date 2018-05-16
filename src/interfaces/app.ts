@@ -65,7 +65,7 @@ interface AgedPerson extends NamedPerson {
   age: number;
 }
 
-let oldPerson: AgePerson = {
+let oldPerson: AgedPerson = {
   age: 88,
   firstName: "Frank",
   greet(lastName: string = '') {
