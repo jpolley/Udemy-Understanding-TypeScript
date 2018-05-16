@@ -1,101 +1,57 @@
-// string
-let myName = 'Jeremy';
+// arrow functions 
+console.log('--------', 'Arrow Functions')
 
-// number
-let myAge = 35.6;
-
-// boolean
-let hasHobbies = true;
-
-// assign types
-let myRealAge: number;
-
-// array
-let hobbies: string[] = ["Cooking", "Sports"];
-
-// tuple
-let address: [string, number] = ["Superstreet", 99];
-
-// enum
-enum Color {
-  Red, // 0
-  Green = 100, // 100
-  Blue = 2// 2
+const add = function(number1: number, number2: number): number {
+  return number1 + number2;
 }
+console.log(add(10, 3));
 
-let myColor: Color = Color.Green;
-myColor // 100
+const multiply = (number1: number, number2: number) => number1 * number2
+console.log(multiply(10, 3));
 
-// any
-let car: any = 'Honda';
-car = { brand: 'Honda', model: 'Odyseey' };
-
-// functions
-function returnMyName(): string {
-  return myName;
+const greet = () => {
+  console.log('Hello there!');
 }
-// console.log(returnMyName());
+greet();
 
-// void
-function sayHello(): void {
-  // console.log("Hello!");
-  // this function doesn't return anything
-}
+const greetMe = (name: string) => console.log(`Hello ${name}`)
+greetMe('Eric')
 
-// argument types
-function multiply(value1: number, value2: number): number {
-  return value1 * value2;
-}
-multiply(2, 4);
-
-// function types
-let myMultiply: (val1: number, val2: number) => number;
-myMultiply = multiply;
-myMultiply(5, 2);
-
-// objects
-let userData: { name: string, age: number } = {
-  name: 'Jeremy',
-  age: 35
-};
-
-// complex object
-let complex: {data:number[], output: (all: boolean) => number[]} = {
-  data: [100, 3.99, 10],
-
-  output: function (all: boolean): number[] {
-    return this.data;
+// Default parameters
+console.log('-------- Default Parameters')
+const countdown = (start: number = 3): void => {
+  while (start > 0) {
+    start--;
   }
-};
-
-// type alias
-type Complex = {data:number[], output: (all: boolean) => number[]}
-
-let complex2: Complex = {
-  data: [100, 3.99, 10],
-
-  output: function (all: boolean): number[] {
-    return this.data;
-  }
-}; 
-
-// union types
-let myRealRealAge: number | string = 27;
-myRealRealAge = "27";
-
-// check types
-let finalValue =  30;
-if (typeof finalValue == "number") {
-  // console.log(`Final value is a number: ${finalValue}`)
+  console.log('Done!', start);  
 }
+countdown(10);
 
-// never
-function neverReturns(): never {
-  throw new Error('An error!');
+// Rest
+console.log("------------- Rest");
+const numbers: number[] = [1, 10, 99, -5];
+console.log(Math.max(...numbers));
+
+// Spread
+function makeArray (...args: number[]) {
+  return args;
 }
+console.log(makeArray(1, 2, 6));
 
-// nullable types
-let canBeNull: number | null = 12;
-canBeNull = null;
-let canAlsoBeNull; // type any & value undefined
-canAlsoBeNull = null;
+// Destructuring Arrays
+console.log('-------- Destructuring Arrays');
+const myHobbies = ["Cooking", "Sports"];
+const [hobby1, hobby2] = myHobbies;
+console.log(hobby1, hobby2)
+
+// Destructuring Objects
+console.log('-------- Destructuring Object');
+
+const userData = {
+  userName: 'Jeremy',
+  age: '35'
+}
+// let myName = userData.userName;
+// let myAge = userData.age;
+let {userName: myName, age: myAge} = userData;
+console.log(myName, myAge);

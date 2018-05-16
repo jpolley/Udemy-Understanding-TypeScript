@@ -1,75 +1,53 @@
 "use strict";
-// string
-var myName = 'Jeremy';
-// number
-var myAge = 35.6;
-// boolean
-var hasHobbies = true;
-// assign types
-var myRealAge;
-// array
-var hobbies = ["Cooking", "Sports"];
-// tuple
-var address = ["Superstreet", 99];
-// enum
-var Color;
-(function (Color) {
-    Color[Color["Red"] = 0] = "Red";
-    Color[Color["Green"] = 100] = "Green";
-    Color[Color["Blue"] = 2] = "Blue"; // 2
-})(Color || (Color = {}));
-var myColor = Color.Green;
-myColor; // 100
-// any
-var car = 'Honda';
-car = { brand: 'Honda', model: 'Odyseey' };
-// functions
-function returnMyName() {
-    return myName;
-}
-console.log(returnMyName());
-// void
-function sayHello() {
-    console.log("Hello!");
-    // this function doesn't return anything
-}
-// argument types
-function multiply(value1, value2) {
-    return value1 * value2;
-}
-multiply(2, 4);
-// function types
-var myMultiply;
-myMultiply = multiply;
-myMultiply(5, 2);
-// objects
-var userData = {
-    name: 'Jeremy',
-    age: 35
+// arrow functions 
+console.log('--------', 'Arrow Functions');
+var add = function (number1, number2) {
+    return number1 + number2;
 };
-// complex object
-var complex = {
-    data: [100, 3.99, 10],
-    output: function (all) {
-        return this.data;
+console.log(add(10, 3));
+var multiply = function (number1, number2) { return number1 * number2; };
+console.log(multiply(10, 3));
+var greet = function () {
+    console.log('Hello there!');
+};
+greet();
+var greetMe = function (name) { return console.log("Hello " + name); };
+greetMe('Eric');
+// Default parameters
+console.log('-------- Default Parameters');
+var countdown = function (start) {
+    if (start === void 0) { start = 3; }
+    while (start > 0) {
+        start--;
     }
+    console.log('Done!', start);
 };
-// union types
-var myRealRealAge = 27;
-myRealRealAge = "27";
-// check types
-var finalValue = 30;
-if (typeof finalValue == "number") {
-    console.log("Final value is a number: " + finalValue);
+countdown(10);
+// Rest
+console.log("------------- Rest");
+var numbers = [1, 10, 99, -5];
+console.log(Math.max.apply(Math, numbers));
+// Spread
+function makeArray() {
+    var args = [];
+    for (var _i = 0; _i < arguments.length; _i++) {
+        args[_i] = arguments[_i];
+    }
+    return args;
 }
-// never
-function neverReturns() {
-    throw new Error('An error!');
-}
-// nullable types
-var canBeNull = 12;
-canBeNull = null;
-var canAlsoBeNull; // type any & value undefined
-canAlsoBeNull = null;
-var canThisBeAny = null;
-console.log(typeof canThisBeAny);
+console.log(makeArray(1, 2, 6));
+// Destructuring Arrays
+console.log('-------- Destructuring Arrays');
+var myHobbies = ["Cooking", "Sports"];
+var hobby1 = myHobbies[0], hobby2 = myHobbies[1];
+console.log(hobby1, hobby2);
+// Destructuring Objects
+console.log('-------- Destructuring Object');
+var userData = {
+    userName: 'Jeremy',
+    age: '35'
+};
+// let myName = userData.userName;
+// let myAge = userData.age;
+var myName = userData.userName, myAge = userData.age;
+console.log(myName, myAge);
