@@ -43,7 +43,7 @@ var oldPerson = {
     firstName: "Frank",
     greet: function (lastName) {
         if (lastName === void 0) { lastName = ''; }
-        console.log("old person hay");
+        console.log("old person hay " + lastName);
     }
 };
 console.log(oldPerson);

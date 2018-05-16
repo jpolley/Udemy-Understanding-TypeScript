@@ -69,7 +69,7 @@ let oldPerson: AgedPerson = {
   age: 88,
   firstName: "Frank",
   greet(lastName: string = '') {
-    console.log("old person hay");
+    console.log("old person hay " + lastName);
   }
 }
 
