@@ -3,9 +3,20 @@
   <head>
     <meta charset="UTF-8">
     <title>Learning TypeScript</title>
-    <script src="/src/app.js"></script>
+    <script src="./node_modules/systemjs/dist/system.js"></script>
   </head>
   <body>
     Hello world!
   </body>
+  <script>
+    SystemJS.config({
+      baseURL: '/',
+      packages: {
+        '/': {
+          defaultExtension: 'js'
+        }
+      }
+    });
+    SystemJS.import('dist/src/modules/app.js')
+  </script>
 </html>

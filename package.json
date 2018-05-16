@@ -4,7 +4,9 @@
   "main": "index.js",
   "author": "Jeremy Polley <jeremypolley@gmail.com>",
   "license": "MIT",
-  "dependencies": {},
+  "dependencies": {
+    "systemjs": "^0.21.3"
+  },
   "devDependencies": {
     "lite-server": "^2.3.0"
   },
