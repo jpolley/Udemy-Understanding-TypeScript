@@ -14,7 +14,7 @@ console.log(betterEcho('Jeremy').length);
 console.log(betterEcho(35));
 console.log(betterEcho({ name: "jeremy", age: 36 }));
 // Built-in Generics
-var testResults = [1.94, 2.33];
+var testResultss = [1.94, 2.33];
 testResults.push(-2.99);
 console.log(testResults);
 // Arrays

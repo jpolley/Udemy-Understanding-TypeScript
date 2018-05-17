@@ -15,7 +15,7 @@ console.log(betterEcho(35));
 console.log(betterEcho({name: "jeremy", age: 36}));
 
 // Built-in Generics
-let testResults: Array<number> = [1.94, 2.33];
+let testResultss: Array<number> = [1.94, 2.33];
 testResults.push(-2.99);
 console.log(testResults);
 
