@@ -1,11 +1,15 @@
 module.exports = {
-  entry: "dist/src/third-party/app.ts",
+  entry: "./src/index.tsx",
   output: {
-    filename: "bundle.js"
+    filename: "./dist/bundle.js"
+  },
+  devtool: "source-map",
+  resolve: {
+    extensions: ["", ".ts", "tsx", ".js"]
   },
   module: {
     loaders: [
-      { test: /\.ts$/, loader: "ts-loader"}
+      { test: /\.tsx?$/, loader: "ts-loader" }
     ]
   }
-}
+};

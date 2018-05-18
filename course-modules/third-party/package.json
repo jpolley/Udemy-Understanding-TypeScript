@@ -2,24 +2,23 @@
   "name": "Udemy-Understanding-TypeScript",
   "version": "1.0.0",
   "main": "index.js",
-  "scripts": {
-    "start": "lite-server",
-    "build": "webpack"
-  },
-  "repository": "https://github.com/jpolley/Udemy-Understanding-TypeScript.git",
   "author": "Jeremy Polley <jeremypolley@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "@types/react": "^16.3.14",
-    "@types/react-dom": "^16.0.5",
-    "react": "^16.3.2",
-    "react-dom": "^16.3.2"
+    "jquery": "^3.3.1",
+    "systemjs": "^0.21.3"
   },
   "devDependencies": {
+    "@types/jquery": "^3.3.2",
     "lite-server": "^2.3.0",
     "ts-loader": "^4.3.0",
     "typescript": "^2.8.3",
     "webpack": "^4.8.3",
     "webpack-cli": "^2.1.3"
+  },
+  "scripts": {
+    "start": "lite-server",
+    "build": "webpack - d --watch",
+    "build:prod": "webpack -p"
   }
 }
