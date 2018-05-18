@@ -29,16 +29,16 @@ printAll<string>(['Apple', 'Banana']);
 let echo2: <T>(data: T) => T = betterEcho;
 console.log(echo2<string>('Pizza Party!'))
 
-// Generic Classes
-class SimpleMath<T extends number | string> {
-  baseValue: T;
-  multiplyValue: T;
-  calculate(): number {
-    return +this.baseValue * +this.multiplyValue;
-  }
-}
+// // Generic Classes
+// class SimpleMath<T extends number | string> {
+//   baseValue: T;
+//   multiplyValue: T;
+//   calculate(): number {
+//     return +this.baseValue * +this.multiplyValue;
+//   }
+// }
 
-const simpleMath = new SimpleMath<number>();
-simpleMath.baseValue = 10;
-simpleMath.multiplyValue = 20;
-console.log(simpleMath.calculate());
+// const simpleMath = new SimpleMath<number>();
+// simpleMath.baseValue = 10;
+// simpleMath.multiplyValue = 20;
+// console.log(simpleMath.calculate());

@@ -25,16 +25,15 @@ printAll(['Apple', 'Banana']);
 // Generic Types
 var echo2 = betterEcho;
 console.log(echo2('Pizza Party!'));
-// Generic Classes
-var SimpleMath = /** @class */ (function () {
-    function SimpleMath() {
-    }
-    SimpleMath.prototype.calculate = function () {
-        return +this.baseValue * +this.multiplyValue;
-    };
-    return SimpleMath;
-}());
-var simpleMath = new SimpleMath();
-simpleMath.baseValue = 10;
-simpleMath.multiplyValue = 20;
-console.log(simpleMath.calculate());
+// // Generic Classes
+// class SimpleMath<T extends number | string> {
+//   baseValue: T;
+//   multiplyValue: T;
+//   calculate(): number {
+//     return +this.baseValue * +this.multiplyValue;
+//   }
+// }
+// const simpleMath = new SimpleMath<number>();
+// simpleMath.baseValue = 10;
+// simpleMath.multiplyValue = 20;
+// console.log(simpleMath.calculate());
