@@ -2,10 +2,12 @@
 class Car {
   name: string;
   acceleration: number;
+  age: number;
 
-  constructor(name: string, acceleration: number = 0,) {
+  constructor(name: string, acceleration: number = 0, age: number = 0,) {
     this.name = name;
     this.acceleration = acceleration;
+    this.age = age;
   }
 
   honk() {
